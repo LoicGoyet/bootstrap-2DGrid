@@ -1,0 +1,111 @@
+  ///////////////////////
+ // Bootstrap 2D Grid //
+///////////////////////
+
+// Requirements
+///////////////
+
+/**
+ * require 'globals/variables'
+ * require dependency 'bootstrap'
+**/
+
+
+
+// Resources
+////////////
+
+@import 'parameters/module';
+@import 'parameters/theme';
+
+
+
+
+// Style
+////////
+
+.grid {
+    &:extend(.row);
+
+    > * {
+        padding-top: @grid-gutter-width * 0.5;
+        padding-bottom: @grid-gutter-width * 0.5;
+    }
+}
+
+ul,
+ol {
+    &.grid {
+        &:extend(.list-unstyled);
+        margin-bottom: 0;
+    }
+}
+
+
+.grid-generator(@2Dgrid_GeneratorLimit);
+.grid-generator(@counter) when (@counter > 0) {
+    .grid-generator((@counter - 1)); // next iteration
+
+    .grid {
+        &.grid-@{counter},
+        &.grid-sm-@{counter} {
+            margin-left: @counter * -0.5px;
+            margin-right: @counter * -0.5px;
+
+            > * {
+                padding-top: @counter * 0.5px;
+                padding-bottom: @counter * 0.5px;
+                padding-left: @counter * 0.5px;
+                padding-right: @counter * 0.5px;
+            }
+        }
+    }
+
+    @media (min-width: @screen-sm-min) {
+        .grid {
+            &.grid-sm-@{counter} {
+                margin-left: @counter * -0.5px;
+                margin-right: @counter * -0.5px;
+
+                > * {
+                    padding-top: @counter * 0.5px;
+                    padding-bottom: @counter * 0.5px;
+                    padding-left: @counter * 0.5px;
+                    padding-right: @counter * 0.5px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: @screen-md-min) {
+        .grid {
+            &.grid-md-@{counter} {
+                margin-left: @counter * -0.5px;
+                margin-right: @counter * -0.5px;
+
+                > * {
+                    padding-top: @counter * 0.5px;
+                    padding-bottom: @counter * 0.5px;
+                    padding-left: @counter * 0.5px;
+                    padding-right: @counter * 0.5px;
+                }
+            }
+        }
+    }
+
+    @media (min-width: @screen-lg-min) {
+        .grid {
+            &.grid-lg-@{counter} {
+                margin-left: @counter * -0.5px;
+                margin-right: @counter * -0.5px;
+
+                > * {
+                    padding-top: @counter * 0.5px;
+                    padding-bottom: @counter * 0.5px;
+                    padding-left: @counter * 0.5px;
+                    padding-right: @counter * 0.5px;
+                }
+            }
+        }
+    }
+}

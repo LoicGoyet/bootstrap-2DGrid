@@ -9,7 +9,7 @@
   	"bootstrap": "3.3.1"
   },
   "ignore": [
-  	"bower_components"
+    "bower_components"
   ],
   "description": "This is some css that allow add vertical space between bootstrap-col",
   "license": "MIT"
