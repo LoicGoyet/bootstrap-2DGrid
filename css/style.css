@@ -2,6 +2,10 @@
  * require 'globals/variables'
  * require dependency 'bootstrap'
 **/
+.grid {
+  margin-right: -15px;
+  margin-left: -15px;
+}
 .grid > * {
   padding-top: 15px;
   padding-bottom: 15px;
