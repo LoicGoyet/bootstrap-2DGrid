@@ -1,0 +1,6 @@
+@each $variant, $gutter in $grid-variants {
+    .row-#{$variant} {
+        @include make-grid-variant-row ($gutter);
+        @include make-grid-variant-columns($gutter, $variant);
+    }
+}
