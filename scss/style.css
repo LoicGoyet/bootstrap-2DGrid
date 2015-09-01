@@ -1,0 +1,13 @@
+.row-2d {
+  margin-top: -15px;
+  margin-bottom: -15px;
+  margin-left: -15px;
+  margin-right: -15px; }
+
+.row-2d .col-xs-1, .row-2d .col-xs-2, .row-2d .col-xs-3, .row-2d .col-xs-4, .row-2d .col-xs-5, .row-2d .col-xs-6, .row-2d .col-xs-7, .row-2d .col-xs-8, .row-2d .col-xs-9, .row-2d .col-xs-10, .row-2d .col-xs-11, .row-2d .col-xs-12, .row-2d .col-sm-1, .row-2d .col-sm-2, .row-2d .col-sm-3, .row-2d .col-sm-4, .row-2d .col-sm-5, .row-2d .col-sm-6, .row-2d .col-sm-7, .row-2d .col-sm-8, .row-2d .col-sm-9, .row-2d .col-sm-10, .row-2d .col-sm-11, .row-2d .col-sm-12, .row-2d .col-md-1, .row-2d .col-md-2, .row-2d .col-md-3, .row-2d .col-md-4, .row-2d .col-md-5, .row-2d .col-md-6, .row-2d .col-md-7, .row-2d .col-md-8, .row-2d .col-md-9, .row-2d .col-md-10, .row-2d .col-md-11, .row-2d .col-md-12, .row-2d .col-lg-1, .row-2d .col-lg-2, .row-2d .col-lg-3, .row-2d .col-lg-4, .row-2d .col-lg-5, .row-2d .col-lg-6, .row-2d .col-lg-7, .row-2d .col-lg-8, .row-2d .col-lg-9, .row-2d .col-lg-10, .row-2d .col-lg-11, .row-2d .col-lg-12 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/*# sourceMappingURL=style.css.map */

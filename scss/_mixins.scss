@@ -1,0 +1,25 @@
+@mixin make-row-2d($gutter: $grid-gutter-2d-width) {
+    margin-top: ceil($gutter / -2);
+    margin-bottom: floor($gutter / -2);
+    margin-left: ceil($gutter / -2);
+    margin-right: floor($gutter / -2);
+};
+
+@mixin make-grid-2d-columns($gutter: $grid-gutter-2d-width) {
+    %grid-column {
+        padding-top: ceil($gutter / 2);
+        padding-bottom: floor($gutter / 2);
+        padding-left: ceil($gutter / 2);
+        padding-right: floor($gutter / 2);
+    }
+
+    .row-2d {
+        @each $breakpoint in $grid-breakpoints {
+            @for $i from 1 through $columns {
+                .col-#{$breakpoint}-#{$i} {
+                    @extend %grid-column;
+                }
+            }
+        }
+    }
+}
