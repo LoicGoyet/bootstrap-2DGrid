@@ -13,7 +13,7 @@
 
     @each $breakpoint in $grid-breakpoints {
         @for $i from 1 through $columns {
-            .col-#{$breakpoint}-#{$i} {
+            > .col-#{$breakpoint}-#{$i} {
                 @if $enable-variant == true {
                     @extend %grid-variant-#{$variant}-column;
                 }

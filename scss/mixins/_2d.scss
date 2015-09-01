@@ -17,7 +17,7 @@
 
     @each $breakpoint in $grid-breakpoints {
         @for $i from 1 through $columns {
-            .col-#{$breakpoint}-#{$i} {
+            > .col-#{$breakpoint}-#{$i} {
                 @if $enable-2d == true {
                     @extend %grid-2d-#{$variant}-column;
                 }
