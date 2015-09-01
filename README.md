@@ -4,47 +4,50 @@
 This is some css that allow add vertical space between bootstrap-col
 
 ## Getting Started
-To enjoy it just link to your template or to your stylesheet the `css/style.css` file.
+To enjoy it just link to your template or to your stylesheet the `css/bootstrap-2dgrid.css` file.
 
-You can also use the less file available at `less/style.less`. With this file you can overide easily customize the Less variables listed below in order to define colors, sizes and more.
+You can also use the scss file available at `scss/bootstrap-2dgrid.scss`. With this file you can overide easily customize the Sass variables listed below in order to define colors, sizes and more. There is no less version planned for now, if you would like one, report an issue, or use the v1.0 (written in less, but a little bit less good).
 
 ## Bower Usage
 Install and manage Toggle Switch using Bower.
 `$ bower install bootstrap-2dgrid`
 
-## The Markup
-Firstable, add to `.row` element the class `.grid` when you use the bootstrap grid system. This will put a vertical gutter between the cols (equals 30px).
-If you want to specify an other gutter width and height use the class `grid-x`, `x` equals to the gutter wanted in pixels. You can't go higher than 50px, but you can move up this limitation with less variables
-You can also do it responsively with the `.grid-xs-x`, `.grid-sm-x`, `.grid-md-x`, `.grid-lg-x` classes that makes the same effect that described below but only on some viewport width.
+## The 2D grid
+Firstable, add to `.row` element the class `.row-2d` when you use the bootstrap grid system. This will put a vertical gutter between the cols (equals 30px).
 
-###basic
-    <div class="row grid">
+```html
+    <div class="row row-2d">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
     </div>
+```
 
-###Grid with a 10px setted gutter space
-    <div class="row grid grid-10">
+## The row variant
+In addition, we added variant in order to enjoy into your markup different gutter row. Add `.row-small` for smaller gutter (20px) or `.row-large` for larger gutter (40px).
+
+```html
+    <div class="row row-small">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
     </div>
+```
 
-###Grid with responsive setted gutter space
-    <div class="row grid grid-xs-5 grid-sm-1 grid-md-30 grid-lg-40">
+```html
+    <div class="row row-large">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
     </div>
+```
 
-## Less Variables
-The variables can be founded in `/less/parameters/module`
-
-* @2Dgrid_GeneratorLimit: 50
-* @2Dgrid-gutterDefault-size: 30px
-* @2Dgrid-screen-sm-min: 768px
-* @2Dgrid-screen-md-min: 992px
-* @2Dgrid-screen-lg-min: 1200px
-
-designed by Loïc Goyet for AppVentus. with love from Nantes
+## The 2d grid + variant
+You can easily combine the both 2d grid and variant, just adding the two class to your row element.
+```html
+    <div class="row row-2d row-small">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
+    </div>
+```
