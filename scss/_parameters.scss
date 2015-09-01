@@ -1,10 +1,10 @@
-$enable-bs4: false;
-$enable-2d: true;
-$enable-variant: true;
-$enable-2dvariant: true;
+$enable-bs4: false !default;
+$enable-2d: true !default;
+$enable-variant: true !default;
+$enable-2dvariant: true !default;
 
 $grid-gutter-2d-width: 30px !default;
-$columns: 12;
+$columns: 12 !default;
 
 $grid-breakpoints: (xs, sm, md, lg) !default;
 $grid-breakpoints-bs4: (xs, sm, md, lg, xl) !default;
@@ -16,4 +16,4 @@ $grid-breakpoints-bs4: (xs, sm, md, lg, xl) !default;
 $grid-variants: (
     small: 10px,
     large: 40px
-);
+) !default;
