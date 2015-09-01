@@ -5,7 +5,7 @@
     }
 }
 
-@mixin make-grid-variant-columns($variant, $gutter) {
+@mixin make-grid-variant-columns($gutter, $variant) {
     %grid-variant-#{$variant}-column {
         padding-left: ceil($gutter / 2);
         padding-right: floor($gutter / 2);
