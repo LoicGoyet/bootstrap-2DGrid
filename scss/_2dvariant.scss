@@ -1,6 +1,8 @@
 @each $variant, $gutter in $grid-variants {
-    .row-2d-#{$variant} {
-        @include make-row-2d ($gutter);
-        @include make-grid-2d-columns ($gutter, $variant, $enable-2dvariant);
+    .row-2d {
+        &.row-#{$variant} {
+            @include make-row-2d ($gutter);
+            @include make-grid-2d-columns ($gutter, $variant, $enable-2dvariant);
+        }
     }
 }

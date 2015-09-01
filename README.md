@@ -12,38 +12,42 @@ You can also use the scss file available at `scss/bootstrap-2dgrid.scss`. With t
 Install and manage Toggle Switch using Bower.
 `$ bower install bootstrap-2dgrid`
 
-## The Markup
+## The 2D grid
 Firstable, add to `.row` element the class `.row-2d` when you use the bootstrap grid system. This will put a vertical gutter between the cols (equals 30px).
 
-``` (html)
-    <div class="row grid">
+```html
+    <div class="row row-2d">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
     </div>
 ```
 
-###Grid with a 10px setted gutter space
-    <div class="row grid grid-10">
+## The row variant
+In addition, we added variant in order to enjoy into your markup different gutter row. Add `.row-small` for smaller gutter (20px) or `.row-large` for larger gutter (40px).
+
+```html
+    <div class="row row-small">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
     </div>
+```
 
-###Grid with responsive setted gutter space
-    <div class="row grid grid-xs-5 grid-sm-1 grid-md-30 grid-lg-40">
+```html
+    <div class="row row-large">
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
     </div>
+```
 
-## Less Variables
-The variables can be founded in `/less/parameters/module`
-
-* @2Dgrid_GeneratorLimit: 50
-* @2Dgrid-gutterDefault-size: 30px
-* @2Dgrid-screen-sm-min: 768px
-* @2Dgrid-screen-md-min: 992px
-* @2Dgrid-screen-lg-min: 1200px
-
-designed by Loïc Goyet for AppVentus. with love from Nantes
+## The 2d grid + variant
+You can easily combine the both 2d grid and variant, just adding the two class to your row element.
+```html
+    <div class="row row-2d row-small">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
+    </div>
+```
