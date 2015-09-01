@@ -51,3 +51,22 @@ You can easily combine the both 2d grid and variant, just adding the two class t
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3"></div>
     </div>
 ```
+
+## Customize
+You can change any parameters listed below in order to make sure bootstrap-2dgrid fits your project. In order to do it, just set the wanted changed parameter before the .scss `@include` and that's all good !
+
+* $grid-gutter-2d-width: 30px !default;
+* $columns: 12;
+
+* $grid-breakpoints: (xs, sm, md, lg) !default;
+* $grid-breakpoints-bs4: (xs, sm, md, lg, xl) !default;
+
+* $grid-variants: (small: 10px, large: 40px);
+
+### Enable parameters
+Some parameters are prefixed with "enable". They are bool that will printout or not some css parts designed. The `$enable-bs4` will list the bootstrap 4 new breakpoints (with a `xl` breakpoint). As an alpha components, he is opt-in for now.
+
+* $enable-bs4: false;
+* $enable-2d: true;
+* $enable-variant: true;
+* $enable-2dvariant: true;
