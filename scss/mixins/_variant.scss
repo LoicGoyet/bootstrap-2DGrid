@@ -1,0 +1,23 @@
+@mixin make-grid-variant-row ($gutter) {
+    @if $enable-variant == true {
+        margin-left: ceil($gutter / -2);
+        margin-right: floor($gutter / -2);
+    }
+}
+
+@mixin make-grid-variant-columns($variant, $gutter) {
+    %grid-variant-#{$variant}-column {
+        padding-left: ceil($gutter / 2);
+        padding-right: floor($gutter / 2);
+    }
+
+    @each $breakpoint in $grid-breakpoints {
+        @for $i from 1 through $columns {
+            .col-#{$breakpoint}-#{$i} {
+                @if $enable-variant == true {
+                    @extend %grid-variant-#{$variant}-column;
+                }
+            }
+        }
+    }
+}

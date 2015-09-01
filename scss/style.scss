@@ -1,9 +1,16 @@
 @import 'functions',
         'parameters',
-        'mixins';
+        'mixins/2d',
+        'mixins/variant';
 
 .row-2d {
     @include make-row-2d;
+    @include make-grid-2d-columns;
 }
 
-@include make-grid-2d-columns;
+@each $variant, $gutter in $grid-variants {
+    .row-#{$variant} {
+        @include make-grid-variant-row ($gutter);
+        @include make-grid-variant-columns($variant, $gutter);
+    }
+}

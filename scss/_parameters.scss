@@ -11,3 +11,9 @@ $grid-breakpoints-bs4: (xs, sm, md, lg, xl) !default;
 @if $enable-bs4 == true {
     $grid-breakpoints: $grid-breakpoints-bs4;
 };
+
+$grid-variants: (
+    small: 10px,
+    medium: 30px,
+    large: 40px
+);
